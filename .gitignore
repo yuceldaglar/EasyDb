@@ -1,0 +1,6 @@
+*.user
+*.dll
+EasyDb/bin/
+EasyDb/obj/
+EasyDb.Engine/bin/
+EasyDb.Engine/obj/

@@ -1,0 +1,6 @@
+﻿
+[                RECORD                   ]...
+table_id record_size [ column_id,value ...]
+
+Deleted Records:
+  Deleted records table_id is zero.

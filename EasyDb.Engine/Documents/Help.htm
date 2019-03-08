@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	
+	    <h1>
+            EasyDb Help 0.3</h1>
+    <h2>
+        Overview</h2>
+    <p>
+        EasyDb is an embedded database engine written in c#.
+        <br />
+        - Native c# types can be used as column types.<br />
+        - Keep all data in-memory for faster operations, Also it can save data to the 
+        disc.<br />
+        - Support transaction. Transactions work as serializable. If something a problem 
+        occures when writing the data to disc such as power failure, engine can detect 
+        semi committed transactions and can recover to a consistent point.<br />
+        - Supports metadata like information schema (tables, columns).<br />
+        - Uses column store for memory data, and row store for disc data.</p>
+    <p>
+        There is also a simple user interface tool to manage EasyDb databases.</p>
+    <h2>
+        EasyDb Manager Tool</h2>
+    <p>
+        With this tool you can:</p>
+<p>
+        &nbsp;- Create a new database, both in-memory or persistent.<br />
+&nbsp;- Execute sql statements.&nbsp; </p>
+<h3>
+    How to create a memory only database?</h3>
+<p>
+    Close if any database is open. Then right-click database icon. Click &quot;new&quot; and a 
+    save file dialog opens. Write &quot;memory&quot; as filename and click ok, a new memory 
+    only database will be created.</p>
+<p>
+    Important: You will loose all data in this database when you close!</p>
+<h2>
+    EasyDb Engine</h2>
+<h3>
+    Sql Support</h3>
+<p>
+    EasyDb engine support sql statements to some degree. All keywords must be 
+    lowercase, table and column names are case sensitive. Also multiple statements 
+    can be joined by &#39;;&#39;</p>
+<p>
+    Sql Examples:</p>
+<ul>
+    <li>begin tran</li>
+    <li>commit</li>
+    <li>rollback</li>
+    <li>create table tablename (id Int32, name String ,...)</li>
+    <li>select * from tablename [where columnA=&#39;value&#39; ]</li>
+    <li>select colA [, colB...] from tablename&nbsp; [where columnA=&#39;value&#39; &amp; ...]</li>
+    <li>insert into tablename (id=4, name=&#39;x&#39;)</li>
+    <li>update tablename set colA = 12 [, colB = 2 ...]&nbsp; [where colX=&#39;value&#39; &amp; ...]</li>
+    <li>delete from tablename&nbsp; [where colX=&#39;value&#39; &amp; ...]</li>
+</ul>
+<p>
+&nbsp;</p>
+	
+	</body>
+</html>

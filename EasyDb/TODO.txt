@@ -1,0 +1,20 @@
+﻿+ Findcol and table optimisation
++ Implement recovery function for corrupt transactions.
+- Implement index
+- Parse alter table add column
+- Use vm instead of statement processing
+	table indexArray, includeCol1, ..2, ..
+	col1 message value
+		+-*/&|!
+		\ reduce
+		: extended index
+		
+		
+Sample Script:
+create table customer (id Int32, name String, city String, age Int32);
+
+insert into customer (id=1, name='A', city='İstanbul', age=30);
+insert into customer (id=2, name='B', city='İstanbul', age=45);
+insert into customer (id=3, name='C', city='ANKARA', age=30);
+insert into customer (id=4, name='D', city='ANKARA', age=30);
+insert into customer (id=5, name='E', city='ANKARA', age=45);

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B58BBAD-1444-4BFD-8A79-57D3EEC62D23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyDb</RootNamespace>
+    <AssemblyName>EasyDb.Engine</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Library\Columns\EasyBaseColumn.cs" />
+    <Compile Include="Library\Columns\EasyBoolColumn.cs" />
+    <Compile Include="Library\Columns\EasyDecimalColumn.cs" />
+    <Compile Include="Library\Columns\EasyIntColumn.cs" />
+    <Compile Include="Library\EasyServer.cs" />
+    <Compile Include="Library\Columns\EasyStringColumn.cs" />
+    <Compile Include="Library\EasyTable.cs" />
+    <Compile Include="Library\EasyTransaction.cs" />
+    <Compile Include="Library\Columns\EasyUIntColumn.cs" />
+    <Compile Include="Library\ICollection.cs" />
+    <Compile Include="Library\SortedSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlParsing\CreateTableStatement.cs" />
+    <Compile Include="SqlParsing\DeleteStatement.cs" />
+    <Compile Include="SqlParsing\InsertStatement.cs" />
+    <Compile Include="SqlParsing\SelectStatement.cs" />
+    <Compile Include="SqlParsing\SimpleStatement.cs" />
+    <Compile Include="SqlParsing\SqlParser.cs" />
+    <Compile Include="SqlParsing\UpdateStatement.cs" />
+    <Compile Include="Storage\RecoverException.cs" />
+    <Compile Include="Storage\StorageManager.cs" />
+    <Compile Include="Utility\PerformanceMonitor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\Help.htm" />
+    <Content Include="Storage\File Structure.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
