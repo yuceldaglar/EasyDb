@@ -12,4 +12,4 @@ EasyDb is a sql database engine, written in c#. Engine can be used as in-memory 
 - Metadata like Information-Schema (tables, columns)
 - There is also a simple user interface to execute sql
 
-![](EasyDb/blob/master/images/easydb1.jpg?raw=true)
+![](images/easydb1.jpg)
